@@ -11,16 +11,21 @@ private:
         Node* next;
     };
     Node* head;
+	Node* temp;
+    int size;
 public:
     LinkedList();
     ~LinkedList();
     void pushFront(int value);
     void pushBack(int value);
+    int get(int index);
+    
+	void insertAt(int index, int value);
     void popFront();
     void popBack();
     void removeAt(int index);
-    void traverse() const;
-    void traverseReverse() const;
+    void traverse();
+    void traverseReverse();
 };
 
 #endif // !LinkedList_H
