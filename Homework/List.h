@@ -3,26 +3,34 @@
 
 class List {
 private:
-	int* arr;
-	int size;
-	int capacity;
+    int *arr;
+    int size;
+    int capacity;
 
 public:
-	 List();
-	~List();
-	void resize();
-	void pushFront(int value);
-	void pushBack(int value);
-	void insertAt(int index, int value);
+    List();
 
-	void popFront();
-	void popBack();
-	void removeAt(int index);
+    ~List();
 
-	int get(int index) const;
+    void resize();
 
-	void traverse() const;
-	void traverseReverse() const;
+    void pushFront(int value);
+
+    void pushBack(int value);
+
+    void insertAt(int index, int value);
+
+    void popFront();
+
+    void popBack();
+
+    void removeAt(int index);
+
+    int get(int index) const;
+
+    void traverse() const;
+
+    void traverseReverse() const;
 };
 
 #endif

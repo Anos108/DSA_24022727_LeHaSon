@@ -5,9 +5,8 @@ using namespace std;
 
 
 LinkedList::LinkedList() {
-    
     head = nullptr;
-    size = 0; 
+    size = 0;
 }
 
 
@@ -16,18 +15,16 @@ LinkedList::~LinkedList() {
         temp = head;
         head = head->next;
         delete temp;
-	}
-	
+    }
 }
 
 
 void LinkedList::pushFront(int value) {
-    Node* newNode = new Node;
-	newNode->data = value;
-	newNode->next = head;
+    Node *newNode = new Node;
+    newNode->data = value;
+    newNode->next = head;
     head = newNode;
     size++;
-	
 }
 
 
@@ -37,7 +34,7 @@ void LinkedList::pushBack(int value) {
         pushFront(value);
         return;
     }
-    Node* newNode = new Node;
+    Node *newNode = new Node;
     newNode->data = value;
     newNode->next = NULL;
 
@@ -50,7 +47,7 @@ void LinkedList::pushBack(int value) {
 
 void LinkedList::insertAt(int index, int value) {
     // TODO
-    Node* newNode = new Node;
+    Node *newNode = new Node;
     newNode->data = value;
     if (index == 0) {
         pushFront(value);
@@ -59,7 +56,6 @@ void LinkedList::insertAt(int index, int value) {
     temp = head;
     for (int i = 1; i < index; i++) {
         temp = temp->next;
-       
     }
     newNode->next = temp->next;
     temp->next = newNode;
@@ -86,10 +82,8 @@ void LinkedList::popBack() {
     }
     delete temp->next;
     temp->next = NULL;
-    
-    size--;
 
-    
+    size--;
 }
 
 // Xóa phần tử tại vị trí index
@@ -101,10 +95,10 @@ void LinkedList::removeAt(int index) {
         temp = temp->next;
     }
 
-    Node* toDelete = temp->next;
+    Node *toDelete = temp->next;
     temp->next = temp->next->next;
     delete toDelete;
-	size--;
+    size--;
 }
 
 // Lấy giá trị tại index
@@ -118,13 +112,12 @@ int LinkedList::get(int index) {
 }
 
 
-void LinkedList::traverse()  {
+void LinkedList::traverse() {
     temp = head;
     while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
-   
 }
 
 
@@ -138,5 +131,4 @@ void LinkedList::traverseReverse() {
     for (int i = arr.size() - 1; i >= 0; i--) {
         cout << arr[i] << " ";
     }
-   
 }

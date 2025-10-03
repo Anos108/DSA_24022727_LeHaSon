@@ -1,11 +1,10 @@
-
 #include <iostream>
 #include "List.h"
 #include "LinkedList.h"
+#include "sort.h"
 using namespace std;
-int main()
-{
-    
+
+int main() {
     List myList;
     myList.pushBack(2);
     myList.pushBack(8);
@@ -18,7 +17,7 @@ int main()
     myList.traverse();
     cout << myList.get(0) << endl;
     myList.traverseReverse();
-	cout << endl << endl;
+    cout << endl << endl;
 
     LinkedList myLinkedList;
     myLinkedList.pushBack(10);
@@ -28,6 +27,8 @@ int main()
     myLinkedList.traverse();
     myLinkedList.popFront();
     myLinkedList.traverse();
-   cout << myLinkedList.get(0);
+    cout << myLinkedList.get(0);
     myLinkedList.traverseReverse();
+
+
 }
