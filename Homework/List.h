@@ -31,6 +31,8 @@ public:
     void traverse() const;
 
     void traverseReverse() const;
+
+    int getSize() const;
 };
 
 #endif

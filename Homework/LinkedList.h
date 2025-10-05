@@ -40,7 +40,7 @@ public:
 
     int getSize() const;
 
-    Node* returnHead() const;
+
 };
 
 #endif // !LinkedList_H
