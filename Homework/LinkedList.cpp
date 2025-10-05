@@ -175,38 +175,38 @@ struct Stack {
 };
 
 struct Queue {
-    LinkedList list2;
+    LinkedList linked_list;
 
     bool isEmptyLinkedList() {
-        if (list2.getSize() == 0) return true;
+        if (linked_list.getSize() == 0) return true;
         else {
             return false;
         }
     }
 
     void enqueueLinkedList(int item) {
-        list2.pushFront(item);
+        linked_list.pushFront(item);
     }
 
     int dequeueLinkedList() {
-        if (list2.getSize() == 0) {
+        if (linked_list.getSize() == 0) {
             cout << "Queue is empty" << endl;
             return -36;
         }
-        int tempo = list2.get(0);
-        list2.popFront();
+        int tempo = linked_list.get(0);
+        linked_list.popFront();
         return tempo;
     }
 
     int frontLinkedList() {
-        if (list2.getSize() == 0) {
+        if (linked_list.getSize() == 0) {
             cout << "Queue is empty" << endl;
             return -36;
         }
-        return list2.get(0);
+        return linked_list.get(0);
     }
 
     int sizeLinkedList() const {
-        return list2.getSize();
+        return linked_list.getSize();
     }
 };
