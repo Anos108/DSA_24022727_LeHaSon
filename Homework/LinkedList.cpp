@@ -10,6 +10,8 @@ LinkedList::LinkedList() {
 }
 
 
+
+
 LinkedList::~LinkedList() {
     while (head != nullptr) {
         temp = head;
@@ -18,6 +20,13 @@ LinkedList::~LinkedList() {
     }
 }
 
+int LinkedList::getSize() const {
+    return size;
+}
+
+LinkedList::Node * LinkedList::returnHead() const {
+    return head;
+}
 
 void LinkedList::pushFront(int value) {
     Node *newNode = new Node;

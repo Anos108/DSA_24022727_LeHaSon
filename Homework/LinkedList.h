@@ -37,6 +37,10 @@ public:
     void traverse();
 
     void traverseReverse();
+
+    int getSize() const;
+
+    Node* returnHead() const;
 };
 
 #endif // !LinkedList_H
