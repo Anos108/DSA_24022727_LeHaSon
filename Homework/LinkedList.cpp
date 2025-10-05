@@ -84,7 +84,6 @@ void LinkedList::popBack() {
     }
     delete temp->next;
     temp->next = nullptr;
-
     size--;
 }
 

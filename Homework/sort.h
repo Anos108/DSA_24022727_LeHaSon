@@ -1,17 +1,14 @@
-//
-// Created by lehas on 10/3/2025.
-//
-
 #ifndef DSA_24022727_LEHASON_SORT_H
 #define DSA_24022727_LEHASON_SORT_H
+#include <vector>
 
-bool binarySearch(int a[], int left, int right, int x);
+bool mybinarySearch(std::vector <int> & arr, int left, int right, int x);
 
-void selectionSort(int a[]);
+void selectionSort(std::vector <int> & arr);
 
-void insertionSort(int a[]);
+void insertionSort(std::vector <int> & arr);
 
-void bubbleSort(int a[]);
+void bubbleSort(std::vector <int> & arr);
 
 
 #endif //DSA_24022727_LEHASON_SORT_H
