@@ -1,6 +1,7 @@
 #include "sort.h"
-#include <bits/stdc++.h>
+#include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 bool binarySearch(const vector<int> &a, int left, int right, int x) {
@@ -19,17 +20,12 @@ bool binarySearch(const vector<int> &a, int left, int right, int x) {
     return false;
 }
 
-int swap(int a, int b) {
-    int temp = a;
-    a = b;
-    b = temp;
-}
 
 /**
  *
  * @param arr mảng ban đầu chưd sắp xếp
  */
-void selectionSort(const vector<int> &arr) {
+void selectionSort(vector<int> &arr) {
     const int n = arr.size();
     for (int i = 0; i < n; i++) {
         int minIndex = i;
@@ -46,7 +42,7 @@ void selectionSort(const vector<int> &arr) {
  *
  * @param arr
  */
-void insertionSort(const vector<int> &arr) {
+void insertionSort(vector<int> &arr) {
     const int n = arr.size();
     for (int i = 1; i < n; i++) {
         int j = i;
@@ -60,7 +56,7 @@ void insertionSort(const vector<int> &arr) {
  *
  * @param arr
  */
-void bubbleSort(const vector<int> &arr) {
+void bubbleSort(vector<int> &arr) {
     const int n = arr.size();
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - i - 1; j++) {
