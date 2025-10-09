@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    /**
+
     List myList;
     myList.pushBack(2);
     myList.pushBack(8);
@@ -32,7 +32,7 @@ int main() {
     myLinkedList.traverse();
     cout << myLinkedList.get(0);
     myLinkedList.traverseReverse();
-*/
+
     vector arr = {1,3,8,2,6,4};
     insertionSort(arr);
     for (int x : arr) {

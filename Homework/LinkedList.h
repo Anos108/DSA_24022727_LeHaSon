@@ -1,7 +1,6 @@
 #ifndef LinkedList_H
 #define LinkedList_H
 
-#include <iostream>
 using namespace std;
 
 class LinkedList {
