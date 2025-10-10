@@ -42,7 +42,7 @@ int BinaryHeap::delMax() {
 }
 
 bool BinaryHeap::isEmpty() const {
-    return heap.size() == 0;
+    return heap.empty();
 }
 
 int BinaryHeap::max() const {

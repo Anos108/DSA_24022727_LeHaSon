@@ -9,7 +9,6 @@ private:
 
     void swim(int k);
 
-
     void sink(int k);
 
 public:
@@ -24,7 +23,5 @@ public:
     int max() const;
 
     int size() const;
-
-
 };
 #endif //DSA_24022727_LEHASON_BINARYHEAP_H
