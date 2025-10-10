@@ -16,4 +16,6 @@ void quickSort(std::vector<int> & arr);
 
 void heapSort(std::vector<int> & arr);
 
+void heapify(std::vector<int> & arr, int n, int i);
+
 #endif //DSA_24022727_LEHASON_SORT_H
