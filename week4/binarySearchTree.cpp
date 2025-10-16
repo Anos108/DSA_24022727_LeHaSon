@@ -3,6 +3,10 @@
 
 using namespace std;
 
+BinarySearchTree::BinarySearchTree() {
+    root = nullptr;
+}
+
 BinarySearchTree::Node *BinarySearchTree::insertRecursive(Node *&cur, int data) {
     if (cur == nullptr) {
         cur = new Node{data, nullptr, nullptr};

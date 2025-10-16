@@ -18,13 +18,19 @@ private:
     Node *insertRecursive(Node * &cur, int data);
 
 public:
+    BinarySearchTree();
+
     void insert(int data);
 
-    void preOrder(Node* cur);
+    void preOrder(Node *cur);
 
-    void inOrder(Node* cur);
+    void inOrder(Node *cur);
 
-    void postOrder(Node * cur);
+    void postOrder(Node *cur);
+
+    Node *getRoot() {
+        return root;
+    }
 };
 
 
