@@ -1,8 +1,6 @@
 #ifndef LinkedList_H
 #define LinkedList_H
 
-using namespace std;
-
 class LinkedList {
 private:
     struct Node {

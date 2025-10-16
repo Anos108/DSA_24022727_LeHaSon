@@ -3,7 +3,10 @@ project(DSA_24022727_LeHaSon)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(Homework)
+include_directories(Homework
+        week1
+        week3
+        week4)
 
 add_executable(DSA_24022727_LeHaSon
         Homework/Homework.cpp
@@ -12,5 +15,6 @@ add_executable(DSA_24022727_LeHaSon
         week3/BInaryHeap.cpp
         week3/PriorityQueue.cpp
         week3/sort.cpp
+        week4/binarySearchTree.cpp
 
 )

@@ -25,5 +25,5 @@ public:
     int max();
 
     int size();
-}
+};
 #endif //DSA_24022727_LEHASON_PRIORITYQUEUE_H
