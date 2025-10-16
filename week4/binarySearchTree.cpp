@@ -29,8 +29,6 @@ void BinarySearchTree::preOrder(Node *cur) {
         cout << cur->data << " ";
         preOrder(cur->left);
         preOrder(cur->right);
-    } else {
-        return;
     }
 }
 
@@ -39,8 +37,6 @@ void BinarySearchTree::inOrder(Node *cur) {
         inOrder(cur->left);
         cout << cur->data << " ";
         inOrder(cur->right);
-    } else {
-        return;
     }
 }
 
