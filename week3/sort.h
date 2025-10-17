@@ -14,7 +14,7 @@ void mergeSort(std::vector<int> & arr);
 
 void quickSort(std::vector<int> & arr, int left, int right);
 
-void partition(std::vector<int> & arr, int left, int right);
+int partition(std::vector<int> &arr, int left, int right);
 
 void heapSort(std::vector<int> & arr);
 
