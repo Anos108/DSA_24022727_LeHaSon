@@ -65,8 +65,41 @@ void bubbleSort(vector<int> &arr) {
         }
     }
 }
-
+void merge(vector<int> &a, vector<int>& left, vector<int>& right) {
+    int i = 0, j = 0, k = 0;
+    while (i < left.size() && j < right.size()) {
+        if (left[i] < right[j]) {
+            a[k] = left[i];
+            i++;
+        }
+        else {
+            a[k] = right[j];
+            j++;
+        }
+    while (i < left.size()) {
+        a[k] = left[i];
+        i++;
+        k++;
+    }
+    while (j < right.size()) {
+        a[k] = right[j];
+        j++;
+        k++;
+    }
+    
 void mergeSort(std::vector<int> &arr) {
+    int mid = arr.size() / 2;
+    vector<int> left(mid);
+    vector<int> right(arr.size() - mid);
+    for (int i = 0; i < mid; i++) {
+        left[i] = arr[i];
+    }
+    for (int j = mid; j < arr.size() - 1; j++) {
+        right[j] = arr[j];
+    }
+    mergeSort(left);
+    mergeSort(right);
+    merge(arr, left, right);
 }
 
 
