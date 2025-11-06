@@ -76,18 +76,21 @@ void merge(vector<int> &a, vector<int>& left, vector<int>& right) {
             a[k] = right[j];
             j++;
         }
-    while (i < left.size()) {
-        a[k] = left[i];
-        i++;
-        k++;
+        while (i < left.size()) {
+            a[k] = left[i];
+            i++;
+            k++;
+        }
+        while (j < right.size()) {
+            a[k] = right[j];
+            j++;
+            k++;
+        }
     }
-    while (j < right.size()) {
-        a[k] = right[j];
-        j++;
-        k++;
-    }
+}
     
 void mergeSort(std::vector<int> &arr) {
+    if (arr.size() < 2) return;
     int mid = arr.size() / 2;
     vector<int> left(mid);
     vector<int> right(arr.size() - mid);
