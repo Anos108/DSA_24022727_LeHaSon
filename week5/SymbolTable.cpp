@@ -40,6 +40,7 @@ template<class Key, class Value>
 Key SymbolTable<Key, Value>::ceiling(Key &key) {
     int i = rank_inprivate(key);
     if (i < keys.size()) return keys[i];
+    return keys[i];
 }
 
 template<class Key, class Value>
