@@ -32,15 +32,15 @@ void LinkedList::pushFront(int value) {
 
 void LinkedList::pushBack(int value) {
     temp = head;
-    if (head == NULL) {
+    if (head == nullptr) {
         pushFront(value);
         return;
     }
     Node *newNode = new Node;
     newNode->data = value;
-    newNode->next = NULL;
+    newNode->next = nullptr;
 
-    while (temp->next != NULL) {
+    while (temp->next != nullptr) {
         temp = temp->next;
     }
     temp->next = newNode;
@@ -49,12 +49,13 @@ void LinkedList::pushBack(int value) {
 
 void LinkedList::insertAt(int index, int value) {
     // TODO
-    Node *newNode = new Node;
-    newNode->data = value;
     if (index == 0) {
         pushFront(value);
         return;
     }
+    Node *newNode = new Node;
+    newNode->data = value;
+
     temp = head;
     for (int i = 1; i < index; i++) {
         temp = temp->next;

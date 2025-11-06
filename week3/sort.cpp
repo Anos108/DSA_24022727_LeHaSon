@@ -73,8 +73,8 @@ void mergeSort(std::vector<int> &arr) {
 void quickSort(std::vector<int> &arr, int left, int right) {
     if (left < right) {
         int pivot = partition(arr, left, right);
-        partition(arr, left, pivot - 1);
-        partition(arr, pivot + 1, right);
+        quickSort(arr, left, pivot - 1);
+        quickSort(arr, pivot + 1, right);
     }
 }
 

@@ -9,12 +9,12 @@ include_directories(Homework
         week4)
 
 add_executable(DSA_24022727_LeHaSon
-        Homework/Homework.cpp
         week1/LinkedList.cpp
         week1/List.cpp
         week3/BInaryHeap.cpp
         week3/PriorityQueue.cpp
         week3/sort.cpp
         week4/binarySearchTree.cpp
-
+        week3/test_sort.cpp
+        week5/SymbolTable.cpp
 )

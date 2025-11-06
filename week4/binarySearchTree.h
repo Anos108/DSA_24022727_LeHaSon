@@ -15,7 +15,7 @@ private:
 
     Node *root;
 
-    Node *insertRecursive(Node * &cur, int data);
+    static Node *insertRecursive(Node * &cur, int data);
 
 public:
     BinarySearchTree();
