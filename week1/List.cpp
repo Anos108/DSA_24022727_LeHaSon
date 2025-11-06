@@ -136,7 +136,7 @@ struct Stack {
     }
 
     void pushList(int item) {
-        list.pushFront(item);
+        list.pushBack(item);
     }
 
     int popList() {
