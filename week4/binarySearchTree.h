@@ -11,6 +11,7 @@ private:
         int data;
         Node *left;
         Node *right;
+        int height;
     };
 
     Node *root;
@@ -22,15 +23,30 @@ public:
 
     void insert(int data);
 
-    void preOrder(Node *cur);
+    static void preOrder(const Node *cur);
 
-    void inOrder(Node *cur);
+    static void inOrder(Node *cur);
 
-    void postOrder(Node *cur);
+    static void postOrder(Node *cur);
 
-    Node *getRoot() {
+    Node *getRoot() const {
         return root;
     }
+
+    static int getHeight(Node* node) {
+        if (node) {
+            return node->height;
+        }
+        else {
+            return 0;
+        }
+    }
+    static int getBalanceFactor(Node* node) {
+        return node->left->height - node->right->height;
+    }
+    static Node* rotate_right(Node* y);
+
+    static Node* rotate_left(Node*x);
 };
 
 

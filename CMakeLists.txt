@@ -15,6 +15,6 @@ add_executable(DSA_24022727_LeHaSon
         week3/PriorityQueue.cpp
         week3/sort.cpp
         week4/binarySearchTree.cpp
-        week3/test_sort.cpp
         week5/SymbolTable.cpp
+        Week6/Graph.cpp
 )
