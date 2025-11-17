@@ -19,6 +19,10 @@ public:
     void addEdge(int v, int neighbor);
 
     void printAdjList(int adjacency_list) const;
+
+    void DFS(int u, vector<bool> visited, vector<int>parent);
+
+    void BFS(int start);
 };
 
 
