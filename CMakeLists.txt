@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(Homework
         week1
         week3
-        week4)
+        week4
+        week7
+        Week6)
 
 add_executable(DSA_24022727_LeHaSon
         week1/LinkedList.cpp
@@ -17,4 +19,6 @@ add_executable(DSA_24022727_LeHaSon
         week4/binarySearchTree.cpp
         week5/SymbolTable.cpp
         Week6/Graph.cpp
+
+        week7/prim.cpp
 )

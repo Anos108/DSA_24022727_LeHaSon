@@ -2,25 +2,19 @@
 #include <iostream>
 #include "kruskal.h"
 #include <algorithm>
-#include <ctime>
 using namespace std;
 
 DSU::DSU(int n) {
     rank.resize(n);
     parent.resize(n);
-    srand(time(0));
-    int rand_int = rand() % 100 + 1; // insert random number into dsu
     for (int i = 0; i < n; i++) {
-        parent.push_back(rand_int);
+        parent[i] = i;
         rank[i] = 1;
     }
 }
 
 int DSU::find(int i) {
-     if (parent[i] == i) {
-         return i;
-     }
-     parent[i] == find(parent[i]);
+    return (parent[i] == i) ? i : (parent[i] = find(parent[i]));
 }
 
 void DSU::unite(int x, int y) {
@@ -37,7 +31,7 @@ bool comparator(vector<int> &a, vector<int> &b) {
 }
 
 int mst(int V, vector<vector<int> > edges) {
-    sort(edges.begin(), edges.end(), comparator);
+    sort(edges.begin(), edges.end(), comparator); //sort the tree by the weight
 
     // Traverse edges in sorted order
     DSU dsu(V);
@@ -53,4 +47,15 @@ int mst(int V, vector<vector<int> > edges) {
         }
     }
     return cost;
+}
+
+int main() {
+    // An edge contains a source, destination and weight
+    vector<vector<int> > edges = {
+        {1, 4, 1}, {1, 2, 2}, {2, 3, 3}, {2, 4, 3}, {1, 5, 4}, {3, 4, 5}, {2, 6, 7}, {3, 6, 8}, {4, 5, 9}
+    };
+
+    cout << mst(9, edges);
+
+    return 0;
 }
