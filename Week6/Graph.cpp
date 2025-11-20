@@ -31,7 +31,7 @@ void Graph::DFS(int u, vector<bool> visited, vector<int> parent) {
 
 void Graph::BFS(int start) {
     queue<int> q;
-    vector<bool> visited(start, false);
+    vector visited(start, false);
     vector<int> dist(start,INFINITY);
     vector<int> parent;
     visited[start] = true;
