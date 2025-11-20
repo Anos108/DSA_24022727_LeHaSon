@@ -49,13 +49,3 @@ int mst(int V, vector<vector<int> > edges) {
     return cost;
 }
 
-int main() {
-    // An edge contains a source, destination and weight
-    vector<vector<int> > edges = {
-        {1, 4, 1}, {1, 2, 2}, {2, 3, 3}, {2, 4, 3}, {1, 5, 4}, {3, 4, 5}, {2, 6, 7}, {3, 6, 8}, {4, 5, 9}
-    };
-
-    cout << mst(9, edges);
-
-    return 0;
-}

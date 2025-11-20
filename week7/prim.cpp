@@ -10,7 +10,7 @@ using namespace std;
 int findMST(int V, int E, vector<vector<int>> &edges) {
     vector<vector<int>> adj[V];
 
-    // Fill the adjacency list with edges and their weights
+
     for (int i = 0; i < E; i++) {
         int u = edges[i][0];
         int v = edges[i][1];
@@ -19,16 +19,16 @@ int findMST(int V, int E, vector<vector<int>> &edges) {
         adj[v].push_back({u, wt});
     }
 
-    // Create a priority queue to store edges with their weights
+
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
 
-    // Create a visited array to keep track of visited vertices
+
     vector<bool> visited(V, false);
 
-    // Variable to store the result (sum of edge weights)
+
     int res = 0;
 
-    // Start with vertex 0
+
     pq.push({0, 0});
 
     // Perform Prim's algorithm to find the Minimum Spanning Tree
@@ -56,13 +56,4 @@ int findMST(int V, int E, vector<vector<int>> &edges) {
     }
 
     return res;
-}
-int main() {
-    vector<vector<int>> graph = {{0, 1, 5},
-                                  {1, 2, 3},
-                                  {0, 2, 1}};
-
-    cout << findMST(3, 3, graph) << endl;
-
-    return 0;
 }

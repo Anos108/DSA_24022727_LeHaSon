@@ -19,6 +19,7 @@ add_executable(DSA_24022727_LeHaSon
         week4/binarySearchTree.cpp
         week5/SymbolTable.cpp
         Week6/Graph.cpp
-
+        week7/kruskal.cpp
         week7/prim.cpp
+        week7/dijkstra_shortest_path.cpp
 )
