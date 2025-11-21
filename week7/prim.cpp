@@ -5,53 +5,36 @@
 
 using namespace std;
 
-int findMST(int V, int E, vector<vector<int> > &edges) {
-    vector<vector<int> > adj[V];
-
-
-    for (int i = 0; i < E; i++) {
+int findMST(vector<vector<int>> edges,int V, int E) {
+    //tạo danh sách kề
+    vector<vector<int>> adj[V];
+    for (int i = 0; i < E;i++) {
         int u = edges[i][0];
         int v = edges[i][1];
-        int wt = edges[i][2];
-        adj[u].push_back({v, wt});
-        adj[v].push_back({u, wt});
+        int wt= edges[i][2];
+        adj[u].push_back({wt,v});
+        adj[v].push_back({wt,u});
     }
-
-
-    priority_queue<pair<int, int>, vector<pair<int, int> >, greater<pair<int, int> > > pq;
-
-
-    vector<bool> visited(V, false);
-
-
+    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<>> pq;
+    vector visited (V, false);
     int res = 0;
-
-
-    pq.emplace(0, 0);
-
-    // Perform Prim's algorithm to find the Minimum Spanning Tree
+    pq.emplace(0,0);
     while (!pq.empty()) {
-        auto p = pq.top();
+        auto top = pq.top();
+        int wt = top.first;
+        int u = top.second;
         pq.pop();
 
-        int wt = p.first;
-        int u = p.second;
-
-        if (visited[u] == true) {
-            continue;
-        }
-
+        // kiểm tra chu trình
+        if (visited[u] == true) continue;
         res += wt;
         visited[u] = true;
-
-
-        for (auto v: adj[u]) {
-            // v[0] represents the vertex and v[1] represents the edge weight
-            if (visited[v[0]] == false) {
-                pq.emplace(v[1], v[0]); // Add the adjacent edge to the priority queue
+        for (auto v : adj[u]) {
+            // v[1] đỉnh v[0] trọng số
+            if (visited[v[1]] == false) {
+                pq.emplace(v[0],v[1]);
             }
         }
     }
-
     return res;
 }
